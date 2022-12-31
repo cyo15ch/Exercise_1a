@@ -1,0 +1,270 @@
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20221231091617)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "post_1" varchar, "post_2" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231091617"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-31 09:22:10.655488"], ["updated_at", "2022-12-31 09:22:10.655488"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2022-12-31 09:25:17.389578"], ["updated_at", "2022-12-31 09:25:17.389578"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("post_1", "post_2", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_1", "I go to school by bus."], ["post_2", "I go to school by plane."], ["created_at", "2022-12-31 09:27:24.395094"], ["updated_at", "2022-12-31 09:27:24.395094"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221231092940)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "first_name" varchar, "last_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231092940"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (2.3ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2022-12-31 09:52:31.434165"], ["updated_at", "2022-12-31 09:52:31.434165"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddContentToPosts (20221231100137)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "content" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231100137"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemovePost1ToPosts (20221231100513)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aposts" ("id" integer NOT NULL PRIMARY KEY, "post_1" varchar DEFAULT NULL, "post_2" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aposts" ("id","post_1","post_2","created_at","updated_at","content")
+                     SELECT "id","post_1","post_2","created_at","updated_at","content" FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY, "post_2" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "posts" ("id","post_2","created_at","updated_at","content")
+                     SELECT "id","post_2","created_at","updated_at","content" FROM "aposts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aposts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231100513"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemovePost2ToPosts (20221231100610)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aposts" ("id" integer NOT NULL PRIMARY KEY, "post_2" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aposts" ("id","post_2","created_at","updated_at","content")
+                     SELECT "id","post_2","created_at","updated_at","content" FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer NOT NULL PRIMARY KEY, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "posts" ("id","created_at","updated_at","content")
+                     SELECT "id","created_at","updated_at","content" FROM "aposts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aposts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231100610"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToPosts (20221231102417)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221231102417"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/posts" for ::1 at 2022-12-31 18:36:07 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms | Allocations: 13148)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started POST "/posts" for ::1 at 2022-12-31 18:36:35 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2330)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started POST "/books" for ::1 at 2022-12-31 18:39:09 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/books"):
+  
+Started POST "/posts" for ::1 at 2022-12-31 18:39:17 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1218)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started POST "/posts" for ::1 at 2022-12-31 18:39:19 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1139)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started GET "/posts" for ::1 at 2022-12-31 18:39:26 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started POST "/posts" for ::1 at 2022-12-31 18:39:33 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1201)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started POST "/posts" for ::1 at 2022-12-31 18:42:51 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms | Allocations: 10518)
+
+
+  
+ActionView::MissingTemplate (Missing template posts/create.jbuilder with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/christinechan/exercise_1/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-6.1.7/app/views"
+  * "/Users/christinechan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-6.1.7/app/views"
+):
+  
+app/controllers/posts_controller.rb:6:in `create'
+Started POST "/posts" for ::1 at 2022-12-31 19:37:53 +0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+  Rendering posts/create.jbuilder
+  Rendered posts/create.jbuilder (Duration: 0.7ms | Allocations: 330)
+Completed 200 OK in 43ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 11009)
+
+
+Started POST "/posts" for ::1 at 2022-12-31 19:38:51 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+  Rendering posts/create.jbuilder
+  Rendered posts/create.jbuilder (Duration: 0.6ms | Allocations: 143)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 2474)
+
+
+Started POST "/posts" for ::1 at 2022-12-31 19:39:05 +0800
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+  Rendering posts/create.jbuilder
+  Rendered posts/create.jbuilder (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 927)
+
+
+Started POST "/posts" for ::1 at 2022-12-31 20:12:13 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#create as */*
+  Parameters: {"name"=>"Harry Potter", "publishing_year"=>"1997", "num_of_pages"=>"223"}
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: posts/create.jbuilder (called from create at /Users/christinechan/exercise_1/app/controllers/posts_controller.rb:6)
+  Rendering posts/create.jbuilder
+  Rendered posts/create.jbuilder (Duration: 1.4ms | Allocations: 411)
+Completed 200 OK in 30ms (Views: 21.0ms | ActiveRecord: 0.3ms | Allocations: 11230)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "mary"], ["created_at", "2022-12-31 12:17:54.181007"], ["updated_at", "2022-12-31 12:17:54.181007"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Mary"], ["created_at", "2022-12-31 12:34:16.023411"], ["updated_at", "2022-12-31 12:34:16.023411"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Mary"], ["created_at", "2022-12-31 12:34:36.798405"], ["updated_at", "2022-12-31 12:34:36.798405"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("created_at", "updated_at", "content", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", "2022-12-31 12:34:36.829776"], ["updated_at", "2022-12-31 12:34:36.829776"], ["content", "Heyhey"], ["user_id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
